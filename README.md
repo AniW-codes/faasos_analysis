@@ -389,6 +389,22 @@ group by driver_id
 ```
 
 
+**Task 16: What was the average time in mins for driver to arriver at HQ to pick up the order and deliver?**
+```sql
+
+Select driver_id, Sum(Diff)/Count(order_id) from
+(Select * from
+(Select *, Row_number() Over(Partition by order_id order by Diff) as Rnk from
+(Select driver_id, customer_orders.order_id, roll_id, DATEDIFF(MINUTE, order_date,pickup_time) as Diff
+from customer_orders
+join driver_order
+	on customer_orders.order_id = driver_order.order_id
+Where pickup_time is not null) a)b
+where Rnk = 1) c
+Group By driver_id
+
+
+```
 ## Reports
 
 - **Data Analysis**: Insights into driver orders, customer orders, and types of rolls.
