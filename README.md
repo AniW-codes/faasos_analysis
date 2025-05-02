@@ -87,10 +87,10 @@ VALUES(1,1,'01-01-2021 18:15:34','20km','32 minutes',''),
 (4,2,'01-04-2021 13:53:03','23.4','40','NaN'),
 (5,3,'01-08-2021 21:10:57','10','15','NaN'),
 (6,3,null,null,null,'Cancellation'),
-(7,2,'01-08-2020 21:30:45','25km','25mins',null),
-(8,2,'01-10-2020 00:15:02','23.4 km','15 minute',null),
+(7,2,'01-08-2021 21:30:45','25km','25mins',null),
+(8,2,'01-10-2021 00:15:02','23.4 km','15 minute',null),
 (9,2,null,null,null,'Customer Cancellation'),
-(10,1,'01-11-2020 18:50:20','10km','10minutes',null);
+(10,1,'01-11-2021 18:50:20','10km','10minutes',null);
 
 
 drop table if exists customer_orders;
