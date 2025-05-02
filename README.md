@@ -1,4 +1,4 @@
-# Faasos Delievery Mgmt using SQL Project
+# Faasos Delivery Mgmt using SQL Project
 
 ## Project Overview
 
